@@ -57,7 +57,7 @@ The sample is a representative volume of wastewater taken from a site which is t
     -   `discTimeProp24hq6h`: Discrete time proportional 24-hour composite, every 6 hr
     -   `discFlowProp`: Discrete flow proportional
     -   `discVolumeProp`: Discrete volume proportional
-    -   `moreSwab`: Moore swab passive sampler
+    -   `mooreSwab`: Moore swab passive sampling method (presence-absence)
     -   `discOther`: Discrete other
     -   `other`: Other type of collection method. Add description to `collectionOther`.
 
@@ -143,6 +143,8 @@ Measurement result (ie. single variable) obtained by analyzing a potentially pos
     -   `vcL`: Viral copies/L
     -   `vcCrA`: Viral copies/copies crAssphage
     -   `Ct`: Cycle threshold
+    -   `noOfMooreSwabResults`: total number of Moore swab PCR results
+    -   `percentPositiveMooreSwabResults`: the percent of positive Moore swab PCR results relative to the total PCR results
     -   `mgl`: milligrams per liter
     -   `mgOl`: milligrams of oxygen per liter
     -   `ph`: pH units (unitless)
