@@ -36,7 +36,7 @@ Comment on the ERD in [Lucidcharts](https://lucid.app/lucidchart/invitations/acc
 
 ## Sample
 
-The sample is a representative volume of wastewater taken from a [Site](#Site) which is then analysed by a lab.
+The sample is a representative volume of wastewater, primary sludge, sediments or surface water taken from a [Site](#Site) which is then analysed by a lab.
 
 -   **sampleID**: (Primary Key) Unique identification for sample. Suggestion: *siteID-date-index*.
 
@@ -68,10 +68,10 @@ The sample is a representative volume of wastewater taken from a [Site](#Site) w
     -   `cpTP24h`: A time proportional 24-hour composite sample generally collected by an autosampler.
     -   `cpFP24h`: A flow proportional 24-hour composite sample generally collected by an autosampler.
     -   `grb`: A single large representative grab sample.
-    -   `grbCp8h`: An 8-hour composite with 8 grab samples each taken once per hour, generally manually performed.
-    -   `grbCp3h`: A 3-hour composite with 3 grab samples each taken once per hour, generally manually performed.
+    -   `grbCp8h`: An 8-hour composite sample composed of 8 grab samples each taken once per hour, generally manually performed.
+    -   `grbCp3h`: A 3-hour composite sample composed of 3 grab samples each taken once per hour, generally manually performed.
     -   `grbCp3`: A grab-composite sample composed of 3 separate grab samples.  
-    -   `mooreSw`: Moore swab passive sample.
+    -   `mooreSw`: Moore swab passive sample in constact with the wastewater stream for more than 24-hours.
     -   `other`: Other type of collection method. Add description to `collectionOther`.
 
 -   **collectionOther**: Description for other type of method not listed in `collection`.
@@ -227,12 +227,12 @@ The site of wastewater sampling, including several *defaults* that can be used t
     -   `uCampus`: University campus.
     -   `mSwrPpl`: Major sewer pipeline.
     -   `pStat`: Pumping station.
-    -   `holdTnk`: Hold tank.
+    -   `holdTnk`: Holding tank.
     -   `retPond`: Retention pond.
     -   `wwtpMuC`: Municipal wastewater treatment plant for combined sewage.
     -   `wwtpMuS`: Municipal wastewater treatment plant for sanitary sewage only.
     -   `wwtpInd`: Industrial wastewater treatment plant.
-    -   `lagoon`: Logoon system for extensive wastewater treatment.
+    -   `lagoon`: Lagoon system for municipal wastewater treatment.
     -   `septTnk`: Septic tank.
     -   `river`: River, natural water body.
     -   `lake`: Lake, natural water body.
@@ -283,7 +283,7 @@ Measurement result (ie. single variable) obtained by at the site of wastewater s
 
 -   **dateTime**: The date and time the measurement was performed.
 
--   **type**: The type of measurement that was performed. The prefix `env` is used for environmental variables, whereas `ww` indicates a measurement on wastewater.
+-   **type**: The type of measurement that was performed. The prefix `env` is used for environmental variables, whereas `ww` indicates a measurement on wastewater, primary sludge, sediments or surface water.
 
     -   `envTemp`: Environmental temperature.
     -   `envRnF`: Rain fall, i.e. amount of precipitation in the form of rain.
@@ -326,6 +326,9 @@ Measurement result (ie. single variable) obtained by at the site of wastewater s
 -   **value**: The actual value that is being reported for this measurement.
 
 -   **unit**: The engineering unit of the measurement.
+    -   `MLPD`: Megalitres per day
+    -   `L/s`: Litres per second
+    -   `cmpd`: Cubic metres per day
 
 -   **qualityFlag**: Does the reporter suspect quality issues with the value of this measurement?
 
